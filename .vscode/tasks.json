@@ -1,0 +1,37 @@
+{
+    "version":"2.0.0",
+    "tasks": [
+        {
+            "label": "c",
+            "group": "test",
+            "command": "bash",
+            "args": [
+                "-c", "(cd ${fileDirname} && python3 ${fileDirname}/${fileBasename})"
+            ]
+        },
+        {
+            "label": "py",
+            "group": "test",
+            "command": "bash",
+            "args": [
+                "-c", "(cd ${fileDirname} && source ~/myspace/env/bin/activate && python3 ${fileDirname}/${fileBasename})"
+            ]
+        },        
+        {
+            "label": "py-win",
+            "group": "test",
+            "command": "cmd",
+            "args": [
+                "/c","(cd ${fileDirname} && python ${fileDirname}/${fileBasename})"
+            ]
+        },
+        {
+            "label": "swift",
+            "group": "test",
+            "command": "bash",
+            "args": [
+                "-c", "(cd ${fileDirname} && source ~/Working/bin/activate && python3 ${fileDirname}/${fileBasename})"
+            ]
+        }
+    ]
+}
